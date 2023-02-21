@@ -13,6 +13,8 @@ add_library(fabric_connection STATIC
   chunk.hpp
   msgconv.cpp
   msgconv.hpp
+  client.hpp
+  client.cpp
 )
 
 target_include_directories(fabric_connection 

@@ -14,13 +14,10 @@ struct FabricConnectionSettings {
     /* [in] */ IFabricTransportConnectionHandler *connectionHandler,
     /* [retval][out] */ IFabricTransportListener **listener);
 
-// /* [entry] */ HRESULT CreateFabricTransportClient(
-//     /* [in] */ REFIID interfaceId,
-//     /* [in] */ FABRIC_TRANSPORT_SETTINGS *settings,
-//     /* [in] */ LPCWSTR connectionAddress,
-//     /* [in] */ IFabricTransportCallbackMessageHandler *notificationHandler,
-//     /* [in] */ IFabricTransportClientEventHandler *clientEventHandler,
-//     /* [in] */ IFabricTransportMessageDisposer *messageDisposer,
-//     /* [retval][out] */ IFabricTransportClient **client);
+/* [entry] */ HRESULT CreateFabricTransportClient(
+    /* [in] */ FabricConnectionSettings *settings,
+    /* [in] */ IFabricTransportCallbackMessageHandler *notificationHandler,
+    /* [in] */ IFabricTransportClientEventHandler *clientEventHandler,
+    /* [retval][out] */ IFabricTransportClient **client);
 
 } // namespace fabricconnection
